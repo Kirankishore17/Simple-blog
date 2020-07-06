@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "style.css" %}'>
+    <title>Article list</title>
+</head>
+<body>
+    <p>list</p>
+    <div class="articles">
+        {% for ob in articles %}
+        <div>
+            <h3>{{ob.title}}</h3>
+            <p>{{ob.slug}}</p>
+            <p>Body: {{ob.snippet}}</p>
+            <p>Date: {{ob.date}}</p>
+        </div>    
+        {% endfor %}
+    </div>
+</body>
+</html>
